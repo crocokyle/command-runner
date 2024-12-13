@@ -1,0 +1,11 @@
+[project]
+name = "command-runner"
+version = "0.0.1"  # Replace with your app's version
+description = "A web UI that stores and runs multiple commands"
+authors = [
+    {name = "Kyle Dixon", email = "me@kyle-dixon.com"}
+]
+license = "GPL"
+dependencies = [
+    "nicegui~=2.8.1"
+]
