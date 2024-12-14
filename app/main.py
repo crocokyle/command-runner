@@ -1,13 +1,12 @@
-from nicegui import ui
-from app.pages.home import home_ui
+from flask import Flask
 
+app = Flask(__name__)
 
 # Define Routes
-@ui.page('/')
+@app.route('/')
 def home():
-    home_ui()
-
+    return "Blonk"
 
 # Run App
 if __name__ in {"__main__", "__mp_main__"}:
-    ui.run(title='My NiceGUI Project', port=8080)
+    app.run(port=8080, debug=True)
