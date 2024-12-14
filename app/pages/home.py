@@ -11,13 +11,9 @@ def home_ui():
 
         # Right side: Navigation and Dark Mode toggle
         with ui.row().classes('gap-4'):
-            ui.link('Home', '/').classes('text-white text-lg')
-            ui.link('About', '/about').classes('text-white text-lg')
-
             # Dark Mode Toggle
             toggle = ui.switch('Dark/Light Mode', on_change=dark.toggle)
 
-    # Main content for the homepage
     # Table Data
     columns = [
         {'name': 'name', 'label': 'Name', 'field': 'name', 'sortable': True},
