@@ -1,11 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 # Define Routes
 @app.route('/')
 def home():
-    return "Blonk"
+    return render_template("home.html")
 
 # Run App
 if __name__ in {"__main__", "__mp_main__"}:
