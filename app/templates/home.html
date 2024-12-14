@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <h1>This will run commands one day</h1>
+    <script src="https://unpkg.com/petite-vue" defer init></script>
+
+    <h1>Command Runner</h1>
+    <div class="command-list" v-scope="{  }">
+        <div class="command-item">
+            <details>
+                <summary>
+                    Echo
+                    <button>Run</button>
+                </summary>
+                <label for="argument1">Input</label>
+                <input id="argument1" type="text" />
+            </details>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,9 +1,50 @@
 body {
     background: #011;
+    font-family: Arial, sans-serif;
     color: #990;
     display: flex;
     margin: 0;
     padding: 0;
     align-content: center;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+h1 {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.command-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 75%;
+}
+
+.command-item {
+    display: flex;
+    flex-direction: row;
+    flex-grow: inherit;
+    justify-content: space-between;
+    width: 60%;
+    background: #123;
+}
+
+.command-item summary {
+}
+
+.command-item::marker {
+    cursor: pointer;
+}
+
+.command-list h3 {
+    align-self: flex-start;
+}
+
+.command-item button {
+    align-self: flex-end;
 }
