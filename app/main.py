@@ -7,6 +7,13 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
+@app.route('/command')
+def command():
+    cmd = request.get_json()
+    print(cmd)
+    return "test"
+
+
 # Run App
 if __name__ in {"__main__", "__mp_main__"}:
     app.run(port=8080, debug=True)

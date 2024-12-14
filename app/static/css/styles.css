@@ -32,19 +32,45 @@ h1 {
     justify-content: space-between;
     width: 60%;
     background: #123;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .command-item summary {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.command-item .command-title::after {
+    content: " (Click for args)";
+    font-size: 12pt;
+    filter: opacity(50%);
+}
+
+.command-item[open] .command-title::after {
+    content: "";
+    color: #ddd;
+    font-size: 12pt;
 }
 
 .command-item::marker {
     cursor: pointer;
 }
 
-.command-list h3 {
-    align-self: flex-start;
-}
-
 .command-item button {
     align-self: flex-end;
+}
+
+.command-title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.command-arg-label {
+    display: inline-block;
+}
+
+.command-arg-value {
+    display: inline;
 }

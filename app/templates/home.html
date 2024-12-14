@@ -7,20 +7,19 @@
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <script src="https://unpkg.com/petite-vue" defer init></script>
 
     <h1>Command Runner</h1>
-    <div class="command-list" v-scope="{  }">
-        <div class="command-item">
-            <details>
-                <summary>
-                    Echo
-                    <button>Run</button>
-                </summary>
-                <label for="argument1">Input</label>
-                <input id="argument1" type="text" />
-            </details>
-        </div>
+    <div class="command-list">
+        <details class="command-item">
+            <summary>
+                <span class="command-title">Echo</span>
+                <button class="command-run">Run</button>
+            </summary>
+            <div class="command-argument">
+                <label for="argument1" class="command-arg-label">Input: </label>
+                <input id="argument1" class="command-arg-text" type="text" />
+            </div>
+        </details>
     </div>
 </body>
 </html>
