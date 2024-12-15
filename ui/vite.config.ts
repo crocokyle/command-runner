@@ -17,4 +17,13 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  build: {
+    outDir: "../app",
+    assetsDir: "static/js",
+    rollupOptions: {
+      input: {
+        app: "templates/index.html"
+      }
+    }
+  }
 })

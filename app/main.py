@@ -5,7 +5,7 @@ app = Flask(__name__)
 # Define Routes
 @app.route('/')
 def home():
-    return render_template("home.html")
+    return render_template("index.html")
 
 @app.route('/command')
 def command():
