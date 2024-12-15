@@ -16,14 +16,6 @@ var commands: command[] = [
 </template>
 
 <style scoped>
-body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .content {
   display: flex;
   flex-direction: column;

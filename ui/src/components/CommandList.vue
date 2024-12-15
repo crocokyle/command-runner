@@ -18,7 +18,10 @@ defineProps<{
         <span class="command-title">{{command.title}}</span>
         <button class="command-run">Run</button>
       </summary>
-      Filler Content
+      <div class="command-arg" v-for="arg in command.args">
+        <label for="input-{{arg}}">{{arg}}</label>
+        <input type="text" id="input-{{arg}}">
+      </div>
     </details>
   </div>
 </template>
@@ -33,21 +36,31 @@ defineProps<{
 .command-item {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .command-item summary {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .command-title {
-  align-self: flex-start;
+  justify-self: flex-start;
 }
 
 .command-run {
-  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.command-arg {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1em;
 }
 </style>
