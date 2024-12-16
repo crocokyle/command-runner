@@ -3,8 +3,8 @@ import type {command} from "@/components/CommandList.vue";
 import CommandList from "@/components/CommandList.vue";
 
 var commands: command[] = [
-  {title: "echo", command: "echo", args: ['test'], workingDir: '~'},
-  {title: 'test', command: 'test', args: ['test'], workingDir: '~'},
+  {title: "Echo", command: "echo", args: ['test'], workingDir: '~'},
+  {title: 'Test', command: 'test', args: ['test'], workingDir: '~'},
 ]
 </script>
 

@@ -3,7 +3,8 @@ body {
   align-items: center;
   flex-direction: column;
   background: #001;
-  color: #88a
+  color: #88a;
+  font-family: Arial, sans-serif;
 }
 
 #app {
