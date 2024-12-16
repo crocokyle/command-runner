@@ -18,3 +18,5 @@ and run `npm run dev`
 cd ui
 npm run dev
 ```
+
+then you can navigate to [here](http://localhost:5173/templates/index.html) to view the ui
