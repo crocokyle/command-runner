@@ -1,15 +1,20 @@
 <script setup lang="ts">
+export type commandArg = {
+  id: number,
+  title: string,
+}
+
 export type command = {
   id: number,
   title: string,
   command: string,
   workingDir: string,
-  args: string[],
-};
+  args: commandArg[],
+}
 
 defineProps<{
   commands: command[]
-}>();
+}>()
 </script>
 
 <template>
@@ -20,8 +25,8 @@ defineProps<{
         <button class="command-run">Run</button>
       </summary>
       <div class="command-arg" v-for="arg in command.args">
-        <label for="input-{{arg}}">{{arg}}:</label>
-        <input type="text" id="input-{{arg}}">
+        <label for="input-{{arg.title}}">{{arg.title}}:</label>
+        <input type="text" id="input-{{arg.title}}">
       </div>
       <div class="command-output open" id="output-{{command.id}}">
 
@@ -92,7 +97,7 @@ defineProps<{
   margin-top: 0.5em;
   padding: 1em;
   background: #334;
-  border-radius: 1em;
+  border-radius: 0.5em;
 }
 
 .command-arg label {

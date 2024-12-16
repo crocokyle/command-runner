@@ -1,18 +1,10 @@
 <script setup lang="ts">
-import type {command} from "@/components/CommandList.vue";
-import CommandList from "@/components/CommandList.vue";
+import HomeView from "@/views/HomeView.vue";
 
-var commands: command[] = [
-  {title: "Echo", command: "echo", args: ['test'], workingDir: '~'},
-  {title: 'Test', command: 'test', args: ['test'], workingDir: '~'},
-]
 </script>
 
 <template>
-  <h1>Command Runner</h1>
-  <div class="content">
-    <CommandList :commands=commands></CommandList>
-  </div>
+  <HomeView />
 </template>
 
 <style scoped>
