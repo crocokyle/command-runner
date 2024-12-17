@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import CommandList from "@/components/CommandList.vue";
+import type {command} from "@/components/CommandList.vue";
 
 var commands: command[] = [
   {id: 0, title: "Echo", command: "echo", args: [{id: 0, title: 'test'}, {id: 1, title: 'best'}], workingDir: '~'},

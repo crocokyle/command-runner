@@ -23,6 +23,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         app: "templates/index.html"
+      },
+      output: {
+        entryFileNames: "static/js/[name].js",
+        assetFileNames: "static/js/[name][extname]"
       }
     }
   }
